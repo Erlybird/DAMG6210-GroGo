@@ -79,7 +79,6 @@ CREATE TABLE Address (
     State VARCHAR(255) NOT NULL,
     Country VARCHAR(255) NOT NULL,
     Zip INT NOT NULL,
-    CONSTRAINT chk_ZipLength CHECK (LEN(CAST(Zip AS VARCHAR(10))) = 5),
     CONSTRAINT chk_AptNo CHECK (AptNo > 0 OR AptNo IS NULL)
 );
 
